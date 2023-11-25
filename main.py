@@ -6,10 +6,10 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SimpleSequentialChain,SequentialChain
 load_dotenv()
-#os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
-#llm = HuggingFaceHub(repo_id='google/flan-t5-large',model_kwargs={"temperature": 0.5, "max_length": 64})
-#output = llm.predict('Can you tell me the capital of America')
-llm = GooglePalm(google_api_key=os.environ.get('GOOGLE_API_KEY'),temparature=0.5)
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
+llm = HuggingFaceHub(repo_id='google/flan-t5-large',model_kwargs={"temperature": 0.5, "max_length": 64})
+output = llm.predict('Can you tell me the capital of America')
+#llm = GooglePalm(google_api_key=os.environ.get('GOOGLE_API_KEY'),temparature=0.5)
 
 # intialize the Prompt template
 
